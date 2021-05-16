@@ -1,0 +1,19 @@
+************
+Salut %(name)s,
+************
+
+Vous avez récemment saisi incorrectement votre mot de passe plusieurs fois, vous avez les deux options suivantes.
+1-“Réessayer de mettre votre ancien mot de passe” ( %(action_url1)s )
+1-“Modifier votre mot de passe” ( %(action_url2)s )
+
+
+Merci,
+L'équipe de  (product_name)s
+
+Si vous rencontrez des problèmes avec le bouton ci-dessus, copiez et collez l'URL ci-dessous dans votre navigateur Web.
+
+%(action_url)s
+
+© 2020 %(product_name)s. Tous les droits sont réservés.
+
+%(company)s

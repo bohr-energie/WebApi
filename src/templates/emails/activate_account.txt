@@ -1,0 +1,16 @@
+************
+Salut %(name)s,
+************
+
+Votre Compte est créé avec succès. Utilisez le bouton ci-dessous pour définir votre mot de passe. 
+Ce lien pour activer votre compte n'est valable que pour les prochaines 24 heures.
+
+Réinitialisez votre mot de passe ( %(action_url)s )
+
+
+Merci,
+L'équipe de %(product_name)s
+
+© 2020 %(product_name)s. Tous les droits sont réservés.
+
+%(company)s
