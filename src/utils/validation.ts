@@ -60,6 +60,14 @@ export const validateSetPassword = () => [
   body("token").isString().exists(),
   body("resetCount").isBoolean().exists(),
 ];
+export const validateSendMail = () => [
+  body("password")
+    .optional()
+    .isLength({ min: 6 })
+    .withMessage("Le mot de passe doit comporter au moins 6 caractères!"),
+  body("token").isString().exists(),
+  body("resetCount").isBoolean().exists(),
+];
 
 export const validatePasswordReset = () =>
   body("email").isEmail().withMessage("Veuillez inserer un email valide!");

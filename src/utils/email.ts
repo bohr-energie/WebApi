@@ -90,7 +90,7 @@ export const sendEmail = async (
       html, // html body
     });
 
-    console.log("Message sent: %s", info.messageId);
+    // console.log("Message sent: %s", info.messageId);
     return info;
   } catch (err) {
     console.error("Message sent error: %s", err);
@@ -110,4 +110,18 @@ export const sendAccountActivationEmail = (user: IUser) => {
   const text = sprintf(emailTextTemplate, params);
   const html = sprintf(emailHtmlTemplate, params);
   return sendEmail(user.email, "Activation de votre compte", text, html);
+};
+
+export const sendContactEmail = (email:string, name:string, company:string, message:string, phone:string) => {
+  const emailHtmlTemplate = bufferFile(
+    `src/templates/emails/activate_account.html`
+  );
+  const emailTextTemplate = bufferFile(
+    `src/templates/emails/activate_account.txt`
+  );
+
+  const params = {email, name, company, message, phone}
+  const text = sprintf(emailTextTemplate, params);
+  const html = sprintf(emailHtmlTemplate, params);
+  return sendEmail(email, "Activation de votre compte", text, html);
 };
